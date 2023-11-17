@@ -19,6 +19,9 @@ function Launch() {
               ABOUT ME
             </a>
           </div>
+          <p className="text-slate-200 font-bold text-xl font-mono mt-2 opacity-70">
+            or just scroll..
+          </p>
         </div>
       </div>
       <div className="flex gap-4 w-screen justify-end items-center text-2xl">

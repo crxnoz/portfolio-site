@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 
 const ImageRoulette = () => {
-  // Load the images only works for 3..
+  // ! Switch to use framer motion
   const [images, setImages] = useState([
     { src: "/design4.png", active: false },
     { src: "/design1.png", active: true },
@@ -95,7 +95,12 @@ const ImageRoulette = () => {
     </div>
   ));
 
-  const classString = `mt-[-150px] transition-transform relative translate-y-[${translate}px] will-change-transform`;
+  // This is the weirdest thing ever.. idk why it doesn't work without doing this
+  let classString = `mt-[-150px] transition-transform relative translate-y-[0px] will-change-transform`;
+  classString = `mt-[-150px] transition-transform relative translate-y-[300px] will-change-transform`;
+  classString = `mt-[-150px] transition-transform relative translate-y-[-300px] will-change-transform`;
+  classString = `mt-[-150px] transition-transform relative translate-y-[-600px] will-change-transform`;
+  classString = `mt-[-150px] transition-transform relative translate-y-[${translate}px] will-change-transform`;
 
   const imgIndicators = images.map((image, index) => (
     <li
