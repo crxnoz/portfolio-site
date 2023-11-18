@@ -1,12 +1,13 @@
 import Launch from "./sections/Launch";
 import About from "./sections/About";
+import Gallery from "./sections/Gallery";
 
 function App() {
   return (
     <>
       <Launch />
       <About />
-      <div className="mt-[300px] flex"></div>
+      <Gallery />
     </>
   );
 }
